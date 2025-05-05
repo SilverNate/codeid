@@ -20,7 +20,7 @@ func InitRouter(db *gorm.DB) *gin.Engine {
 		murid.POST("", muridHandler.CreateMurid)
 		murid.GET("", muridHandler.GetMurid)
 		//murid.GET("/:id", muridHandler.GetAuthorByID)
-		//murid.PUT("/:id", muridHandler.UpdateAuthor)
+		murid.PUT("/:id", muridHandler.UpdateMurid)
 		//murid.DELETE("/:id", muridHandler.DeleteAuthor)
 	}
 	return r

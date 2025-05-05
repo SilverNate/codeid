@@ -1,6 +1,8 @@
 package murid
 
-import "context"
+import (
+	"context"
+)
 
 type MuridService struct {
 	repo IMuridRepo
@@ -16,4 +18,8 @@ func (s *MuridService) CreateMurid(ctx context.Context, request Murid) (err erro
 
 func (s *MuridService) GetMurid(ctx context.Context) (result []Murid, err error) {
 	return s.repo.GetAllMurid()
+}
+
+func (s *MuridService) UpdateMurid(ctx context.Context, request Murid) (err error) {
+	return s.repo.UpdateMurid(&request)
 }

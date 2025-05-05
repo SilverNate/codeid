@@ -1,8 +1,8 @@
 package murid
 
 type Murid struct {
-	Id          int    `db:"id"`
-	Name        string `db:"name"`
+	Id          int    `db:"id" json:"id"`
+	Name        string `db:"name" json:"name"`
 	TimeCreated string `db:"time_create"`
 }
 
