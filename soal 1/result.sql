@@ -1,0 +1,1 @@
+select p.id_murid,m.name,p.status AS pendidikan_terakhir,m.time_create AS time_create,p.time_create AS time_update from murid m JOIN ( select id_murid, status, time_create from pendidikan p1 where time_create = (SELECT MAX(time_create) FROM pendidikan p2 WHERE p2.id_murid = p1.id_murid)) p ON m.id = p.id_murid;
